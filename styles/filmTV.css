@@ -1,0 +1,458 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  height: 80px;
+  background: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.brand a.logo {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.brand a.logo img {
+  width: 4vw;
+  height: 4vw;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 80px;
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: pink;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 80px;
+  width: 80px;
+}
+
+.start {
+  background-color: rgb(77, 110, 22);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+div.filter {
+  position: absolute;
+  top: 0;
+}
+
+.main-header {
+  background-color: white;
+  font-size: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.932);
+}
+.main-header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.main-header .logo {
+  width: 150px;
+}
+.main-header .logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+.main-header .main-nav {
+  display: flex;
+}
+.main-header .main-nav:first-of-type {
+  order: -1;
+}
+.main-header .main-nav a {
+  text-decoration: none;
+  color: rgb(70, 65, 65);
+  padding: 5px 1em;
+  position: relative;
+  transform: translateY(0px);
+  transition: 0.3s;
+}
+.main-header .main-nav a:hover {
+  transform: translateY(-8px);
+}
+.main-header .main-nav a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 0;
+  border-bottom: 1px solid black;
+  transition: 0.3s;
+}
+.main-header .main-nav a:hover:after {
+  left: 0;
+  right: 0;
+}
+
+main {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url(../img/富士山.jpg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.content {
+  background-color: rgb(190, 190, 190);
+  align-items: center;
+  text-align: center;
+  padding: 5rem 0rem;
+}
+div.content h2 {
+  color: #ffffff;
+}
+div.content h3 {
+  color: #798861;
+}
+div.content ul li li.track {
+  text-decoration: none;
+  color: red;
+}
+div.content ul li a {
+  text-decoration: none;
+  color: rgb(153, 138, 105);
+}
+div.content div.artist {
+  color: rgb(255, 255, 255);
+  padding: 1rem 0rem;
+}
+div.content div.track-info {
+  padding: 5rem 0rem;
+}
+div.content div.track-info img {
+  width: 50vw;
+  height: 50vw;
+}
+div.content div.track-info div.title a.link {
+  text-decoration: none;
+  color: rgb(153, 138, 105);
+}
+div.content div.track-info figure audio {
+  width: 55vw;
+}
+
+/*頁尾*/
+.bottom .bottom-nav {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+
+@media only screen and (max-width: 798px) {
+  .navigation {
+    height: 80px;
+    background: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  .navigation .brand a.logo img {
+    width: 16vw;
+    height: 16vw;
+  }
+  .navigation .nav-mobile {
+    display: block;
+    background-color: pink;
+  }
+  nav {
+    width: 100%;
+    padding: 80px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 700px) {
+  html.hydrated body footer.footer ul.menu {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*頁尾*/
+.footer {
+  position: relative;
+  background: #798861;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  -webkit-animation: animateWaves 4s linear infinite;
+          animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  -webkit-animation: animate 4s linear infinite !important;
+          animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  -webkit-animation: animateWaves 3s linear infinite;
+          animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+@-webkit-keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}/*# sourceMappingURL=filmTV.css.map */

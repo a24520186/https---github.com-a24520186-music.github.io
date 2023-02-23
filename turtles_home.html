@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <title>Yuting Lapintin Chen</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./styles/turtles_home.css" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <!-- <a href="#!">Logo</a> -->
+          <a href="./index.html" class="logo">
+            <img src="./img/rabbitlogo.jpg" />
+          </a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="#!">Featured Work</a>
+            </li>
+            <li>
+              <a class="active" href="#!">Turtle's Home</a>
+            </li>
+            <li>
+              <a href="#!">Music</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="./filmTv.html">Film & TV</a>
+                </li>
+                <li>
+                  <a href="./video_games.html">Video Games</a>
+                </li>
+                <li>
+                  <a href="./concert_music.html">Concert Music</a>
+                </li>
+                <li>
+                  <a href="./Music_Visual_Art.html">Music & Visual ART</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#!">Album</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="./turtles_home.html">Turtle's Home</a>
+                </li>
+                <li>
+                  <a href="./little_star.html">Little Star</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="top-bar">
+        <i class="material-icons">favorite_border</i>
+        <span>Now Playing</span>
+        <i class="material-icons">add</i>
+      </div>
+      <div class="img-area">
+        <img src="" alt="" />
+      </div>
+      <div class="song-details">
+        <p class="name"></p>
+        <p class="artist"></p>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-bar">
+          <audio id="main-audio" src=""></audio>
+        </div>
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
+        <audio id="main-audio" src=""></audio>
+      </div>
+
+      <div class="controls">
+        <i id="repeat-plist" class="material-icons" title="Playlist looped"
+          >repeat</i
+        >
+        <i id="prev" class="material-icons prev">fast_rewind</i>
+        <div class="play-pause">
+          <i class="material-icons play">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons next">fast_forward</i>
+        <i id="more-music" class="material-icons">queue_music</i>
+      </div>
+
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class="list material-icons">queue_music</i>
+            <span>Music List</span>
+          </div>
+          <i id="close" class="material-icons">close</i>
+        </div>
+        <ul></ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://soundcloud.com/yutinglapintin_chen"
+          >
+            <img src="./icons/soundcloud.svg" alt="" />
+            <ion-icon name="soundcloud"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.imdb.com/name/nm10762439/"
+          >
+            <img src="./icons/imdb.svg" alt="" />
+            <ion-icon name="Imdb"></ion-icon>
+          </a>
+        </li>
+        <!-- <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <img src="./icons/instagram.svg" alt="" />
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li> -->
+        <li class="social-icon__item">
+          <a
+            class="social-icon__link"
+            href="https://www.instagram.com/lapintinmmm/?hl=en"
+          >
+            <img src="./img/instagram.svg" alt="" />
+            <ion-icon name="instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="./index.html">Home</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./about.html">About</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./contact.html">Contact</a>
+        </li>
+        <!-- <li class="menu__item">
+          <a class="menu__link" href="#">FeaturedWork</a>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li> -->
+      </ul>
+      <p style="text-align: center; white-space: pre-wrap" class="">
+        Contact: yutingchen.lapintin@gmail.com
+      </p>
+      <p>&copy;2023 Yuting Lapintinchen | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./app.js"></script>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+
+    <script src="./js/music-list.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

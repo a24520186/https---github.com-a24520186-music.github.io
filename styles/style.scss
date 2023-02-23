@@ -1,0 +1,514 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// Navigation Variables
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 80px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581dc;
+
+// Outer navigation wrapper
+.navigation {
+  height: $nav-height;
+  background: white;
+  // background: $nav-background;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+h1 {
+  font-family: "Playball", cursive;
+  padding: 1.5rem 0rem;
+}
+
+h2 {
+  padding: 3rem 0rem;
+}
+
+h3 {
+  padding: 3rem 0rem;
+}
+
+// Logo and branding
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+
+  a.logo {
+    img {
+      width: 4vw;
+      height: 4vw;
+    }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+// Navigation
+nav {
+  float: right;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a,
+      a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background-color: #ffffff;
+        color: black;
+        // background: $nav-background;
+        // color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          // 導覽列碰到的顏色
+          background: pink;
+          // background: $link-hover-color;
+          color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: " ▾";
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 190px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: $nav-background;
+  height: $nav-height;
+  width: $nav-height;
+}
+
+//Myjob
+
+.start {
+  background-color: rgb(255, 255, 255);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+div.filter {
+  position: absolute;
+  top: 0;
+}
+
+.main-header {
+  background-color: white;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.932);
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .logo {
+    width: 150px;
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .main-nav {
+    display: flex;
+  }
+
+  .main-nav:first-of-type {
+    order: -1;
+  }
+
+  .main-nav a {
+    text-decoration: none;
+    color: rgb(70, 65, 65);
+    padding: 5px 1em;
+    position: relative;
+    transform: translateY(0px);
+    transition: 0.3s;
+  }
+
+  .main-nav a:hover {
+    transform: translateY(-8px);
+  }
+
+  .main-nav a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 1px solid black;
+    transition: 0.3s;
+  }
+
+  .main-nav a:hover:after {
+    left: 0;
+    right: 0;
+  }
+}
+
+main {
+  min-height: 90vh;
+  width: 100%;
+
+  background-image: url(../img/main.jpeg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+//身體
+
+div.content {
+  background-color: rgb(190, 190, 190);
+  //   display: flex;
+  //   justify-content: center;
+  align-items: center;
+  //   flex-direction: column;
+  text-align: center;
+  padding: 5rem 0rem;
+  ul {
+    li {
+      li.track {
+        text-decoration: none;
+        color: red;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(153, 138, 105);
+      }
+    }
+  }
+
+  div.artist {
+    color: rgb(255, 255, 255);
+    padding: 1rem 0rem;
+  }
+
+  div.track-info {
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    padding: 1.5rem;
+
+    div.title {
+      a.link {
+        text-decoration: none;
+        color: rgb(153, 138, 105);
+      }
+    }
+
+    figure {
+      audio {
+        // border: 2px solid red;
+        width: 55vw;
+      }
+    }
+  }
+}
+
+//MyJob
+
+/*頁尾*/
+.bottom .bottom-nav {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+
+@media only screen and (max-width: 798px) {
+  // Hamburger nav visible on mobile only
+  .navigation {
+    height: $nav-height;
+    // 導覽列背景色
+    background: white;
+    // background: $nav-background;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .brand {
+      a.logo {
+        img {
+          width: 16vw;
+          height: 16vw;
+        }
+      }
+    }
+
+    .nav-mobile {
+      display: block;
+      // 漢堡顏色
+      background-color: pink;
+    }
+  }
+
+  nav {
+    width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+        ul li a {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html.hydrated {
+    body {
+      footer.footer {
+        ul.menu {
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// Page content
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.footer {
+  position: relative;
+  // width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
